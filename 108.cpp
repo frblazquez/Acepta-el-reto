@@ -59,7 +59,7 @@ int main()
       else if(ventasCategoria[i]==actualMax){empateMax = true;}
 
       if     (ventasCategoria[i]<actualMin) {actualMin = ventasCategoria[i]; indexMin = i; empateMin = false;}
-      else if(ventasCategoria[i]==actualMax){empateMin = true;}
+      else if(ventasCategoria[i]==actualMin){empateMin = true;}
     }
 
     double avgTotal   = (numVentas ? sumaVentas/numVentas         : 0);
