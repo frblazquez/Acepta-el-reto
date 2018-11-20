@@ -18,14 +18,13 @@ int main()
   while(numElems)
   {
     cin >> elem;
-    int min = elem, maxBefore = elem, max = elem, numKids = 1;
+    int maxBefore = elem, max = elem, numKids = 1;
 
     for(int i = 1; i < numElems; i++)
     {
       cin >> elem;
 
       if(elem > max)  max = elem;
-      if(elem < min)  min = elem;
 
       if(elem <= maxBefore) {numKids = i+1; maxBefore = max;}
     }
