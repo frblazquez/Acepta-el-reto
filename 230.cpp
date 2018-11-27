@@ -8,12 +8,15 @@
 *
 */
 
+// ALL THE PROBLEMS WITH THIS EXERCISE WERE BECAUSE IT'S NECESSARY TO USE
+// LONG LONG INT TYPE (NOT JUST INT) FOR THE DISORDER VARIABLE!!
+
 #include <iostream>
 #include <vector>
 using namespace std;
 
 //I don't really like this reference for the vector, it's for ordering it
-int temporalDisorder(vector<int> &peopleAge, int ini, int end);
+long long int temporalDisorder(vector<int> &peopleAge, int ini, int end);
 
 int main()
 {
@@ -33,13 +36,13 @@ int main()
   return 0;
 }
 
-int temporalDisorder(vector<int> &peopleAge, int ini, int end)
+long long int temporalDisorder(vector<int> &peopleAge, int ini, int end)
 {
   //Just one element case
   if(end - ini <= 1)  return 0;
 
   //Recursive calls
-  int mid = (ini+end)/2, disorder = 0;
+  int mid = (ini+end)/2; long long int  disorder = 0;
 
   disorder += temporalDisorder(peopleAge, ini, mid);
   disorder += temporalDisorder(peopleAge, mid, end);

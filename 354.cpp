@@ -24,8 +24,7 @@ int main()
     {
       cin >> elem;
 
-      if(elem > max)  max = elem;
-
+      if(elem > max)        {max = elem;}
       if(elem <= maxBefore) {numKids = i+1; maxBefore = max;}
     }
 
