@@ -15,9 +15,9 @@ bool isBalanced(int &pt);
 
 int main()
 {
-  int aux;
+  int aux; bool okInput = true;
 
-  while(cin)
+  while(okInput)
   {
     if(isBalanced(aux))
       cout << "SI\n";
@@ -28,11 +28,13 @@ int main()
   return 0;
 }
 
-bool isBalanced(int &pt, bool okInput)
+bool isBalanced(int &pt, bool &okInput)
 {
   int pi,di,pd,dd;
-  cin >> pi >> di >> pd >> dd;
-
+  cin >> pi >> di >> pd >> dd;  
+  okInput = cin;
+  
+  
   bool balancedIzq = true, balancedDcha = true;
 
   if(pi==0)
