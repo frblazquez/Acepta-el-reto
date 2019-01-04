@@ -13,13 +13,21 @@ using namespace std;
 
 int main()
 {
-  int hour, min; char c;
-  cin >> hour >> c >> min;
+  int num; cin >> num;
 
-  while(hour!=0 || min!=0)
+  while(num>= 0)
   {
-    cout << 60*(23-hour)+(60-min) << '\n';
-    cin >> hour >> c >> min;
+    bool hiperOdd = true;
+
+    while(num != 0 && hiperOdd)
+    {
+      hiperOdd &= (num%2 == 0);
+      num /= 10;
+    }
+
+    if(hiperOdd)  cout << "SI\n";
+    else          cout << "NO\n";
+    cin >> num;
   }
 
   return 0;
