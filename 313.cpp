@@ -5,7 +5,7 @@
 *
 *   Double degree in Mathematics-Computer engineering.
 *   Complutense university, Madrid.
-*   
+*
 */
 
 #include <iostream>
@@ -13,15 +13,17 @@ using namespace std;
 
 int main()
 {
-  int numCasos; cin >> numCasos;
-  int initValue, balance;
+  int numCases; cin >> numCases;
+  int money, moneyVariation;
 
-  while(numCasos--)
+  while(numCases--)
   {
-    cin >> initValue >> balance;
+    cin >> money >> moneyVariation;
 
-    if(initValue + balance >= 0)  cout << "SI\n";
-    else                          cout << "NO\n";
+    if(money + moneyVariation >= 0)
+      cout << "SI\n";
+    else
+      cout << "NO\n";
   }
 
   return 0;

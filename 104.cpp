@@ -11,17 +11,19 @@
 #include <iostream>
 using namespace std;
 
-bool isBalanced(int &pt);
+bool isBalanced(int &pt, bool &okInput);
 
 int main()
 {
-  int aux; bool okInput = true;
+  int aux; bool okInput = true, balanced;
 
   while(okInput)
   {
-    if(isBalanced(aux))
+    balanced = isBalanced(aux, okInput);
+
+    if(okInput && balanced)
       cout << "SI\n";
-    else if(cin)
+    else if(okInput)
       cout << "NO\n";
   }
 
@@ -31,17 +33,18 @@ int main()
 bool isBalanced(int &pt, bool &okInput)
 {
   int pi,di,pd,dd;
-  cin >> pi >> di >> pd >> dd;  
-  okInput = cin;
-  
-  
+  cin >> pi >> di >> pd >> dd;
+
+  okInput = (pi!=0 || di!=0 || pd!=0 || dd!=0);
+
   bool balancedIzq = true, balancedDcha = true;
+  bool aux1, aux2;
 
   if(pi==0)
-    balancedIzq = isBalanced(pi);
+    balancedIzq = isBalanced(pi, aux1);
 
   if(pd==0)
-    balancedDcha = isBalanced(pd);
+    balancedDcha = isBalanced(pd, aux2);
 
   pt = pi + pd;
   return balancedIzq && balancedDcha && pi*di == pd*dd;
