@@ -14,22 +14,22 @@ using namespace std;
 int main()
 {
   int num, last, total;
-  scanf("%d", &last);
+  cin >> last;
 
-  while(last != -1)
+  while(last >= 0)
   {
-    scanf("%d", &num); total = 0;
+    cin >> num; total = 0;
 
     while(num != -1)
     {
       total += abs(num - last);
       last = num;
 
-      scanf("%d", &num);
+      cin >> num;
     }
 
     cout << total << '\n';
-    scanf("%d", &last);
+    cin >> last;
   }
 
   return 0;

@@ -16,11 +16,9 @@ int main()
   int distance, speedLimit, timeLapse;
   cin >> distance >> speedLimit >> timeLapse;
 
-  while(distance || speedLimit || timeLapse)
+  while(!(distance==0 && speedLimit==0 && timeLapse==0))
   {
-    if(distance < 0 || speedLimit < 0 || timeLapse < 0) cout << "ERROR\n";
-    else if(distance == 0)                              cout << "OK\n";
-    else if(timeLapse == 0)                             cout << "PUNTOS\n";
+    if(distance <= 0 || speedLimit <= 0 || timeLapse <= 0) cout << "ERROR\n";
     else
     {
       double avgSpeedMperS   = double(distance)/timeLapse;

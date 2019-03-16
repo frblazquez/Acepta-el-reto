@@ -11,11 +11,11 @@
 #include <iostream>
 using namespace std;
 
-bool isBalanced(int &pt, bool &okInput);
+bool isBalanced(long long int &pt, bool &okInput);
 
 int main()
 {
-  int aux; bool okInput = true, balanced;
+  long long int aux; bool okInput = true, balanced;
 
   while(okInput)
   {
@@ -30,9 +30,9 @@ int main()
   return 0;
 }
 
-bool isBalanced(int &pt, bool &okInput)
+bool isBalanced(long long int &pt, bool &okInput)
 {
-  int pi,di,pd,dd;
+  long long int pi,di,pd,dd;
   cin >> pi >> di >> pd >> dd;
 
   okInput = (pi!=0 || di!=0 || pd!=0 || dd!=0);

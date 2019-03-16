@@ -14,19 +14,14 @@ using namespace std;
 
 int main()
 {
-  int numCases, height; cin >> numCases;
-  unsigned long long int marbles, aux, aux2;
+  int numCases; cin >> numCases;
+  long long int height;
 
   while(numCases--)
   {
     cin >> height;
 
-    aux  = (height*(height+1))/2;
-    aux2 = (aux*(2*height+1))/3;
-
-    marbles = (aux + aux2)/2;
-
-    cout << marbles << '\n';
+    cout << (height*(height+1)*(height+2))/6 << '\n';
   }
 
   return 0;
